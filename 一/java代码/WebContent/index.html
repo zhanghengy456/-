@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>董铭鑫个人主页</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+/*设置超链接样式*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: #5086a5;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+a:hover {
+	color: #5086a5;
+	text-decoration: underline;
+	font-size: 12px;
+}
+
+a:visited {
+	color: #5086a5;
+	font-size: 12px;
+}
+/*整个tab层居中，宽度为600px*/
+#tabDiv {
+	width: 600px;
+	margin: 1em auto;
+	padding-bottom: 10px;
+	border-right: #b2c9d3 1px solid;
+	border-top: #b2c9d3 1px solid;
+	border-left: #b2c9d3 1px solid;
+	border-bottom: #b2c9d3 1px solid;
+	background: #ffffff;
+}
+/*tab头的样式*/
+#tabsHead {
+	padding-left: 0px;
+	height: 26px;
+	background-color: #e8f7fc;
+	font-size: 1em;
+	margin: 1px 0px 0px;
+	color: #5086a5;
+	line-height: 26px;
+}
+/*已选tab头（超链接）的样式*/
+.curtab {
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	border-right: #b2c9d3 1px solid;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+	background: #ffffff;
+}
+/*未选tab头（超链接）的样式*/
+.tabs {
+	border-right: #c1d8e0 1px solid;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-weight: normal;
+	float: left;
+	cursor: pointer;
+}
+p {
+	font-size: 12pt;
+	text-indent: 2em;
+}
+li {
+  	border-bottom-style: solid;
+  	border-bottom-color: #EEE;
+  	border-bottom-width: thin;
+  	height: 25px;
+	font-family: "宋体";
+	font-size: 12pt;
+}
+</style>
+
+<script type="text/jscript">	
+        //显示tab（tabHeadId：tab头中当前的超链接；tabContentId要显示的层ID）
+        function showTab(tabHeadId,tabContentId) 
+        {
+            //tab层
+            var tabDiv = document.getElementById("tabDiv");
+            //将tab层中所有的内容层设为不可见
+            //遍历tab层下的所有子节点
+            var taContents = tabDiv.childNodes;
+            for(i=0; i<taContents.length; i++) 
+            {
+                //将所有内容层都设为不可见
+                if(taContents[i].id!=null && taContents[i].id != 'tabsHead')
+                {
+                    taContents[i].style.display = 'none';
+                }
+            }
+            //将要显示的层设为可见
+            document.getElementById(tabContentId).style.display = 'block';          
+            //遍历tab头中所有的超链接
+            var tabHeads = document.getElementById('tabsHead').getElementsByTagName('a');
+            for(i=0; i<tabHeads.length; i++) 
+            { 
+                //将超链接的样式设为未选的tab头样式
+                tabHeads[i].className='tabs'; 
+            }
+            //将当前超链接的样式设为已选tab头样式
+            document.getElementById(tabHeadId).className='curtab';
+            document.getElementById(tabHeadId).blur();
+        }
+</script>
+</head>
+
+<body>
+	<div style="width: 100%; font-family: 微软雅黑; text-align: center; font-size: 20pt;">董铭鑫个人主页</div>
+
+	<div id="tabDiv" style="width: 1000px">
+
+		<div id="tabsHead">
+			<a id="tabs1" class="curtab" href="javascript:showTab('tabs1','tabContent1')">基本资料</a> <a id="tabs2" class="tabs" href="javascript:showTab('tabs2','tabContent2')">获奖记录</a>
+		</div>
+
+		<div id="tabContent1" style="display: block">
+			<table style="border-width: 0; width: 100%">
+				<tr>
+					<td rowspan="3" style="width: 300px; text-align: center"><img alt="邓伦" src="images/denglun.jpg" style="width: 280px" /></td>
+					<td colspan="3" rowspan="3">
+						<table border="1" style="border-left-color: aqua; border-bottom-color: aqua; width: 701px; border-top-style: solid; border-top-color: aqua; border-right-style: solid; border-left-style: solid; height: 380px; border-right-color: aqua; border-bottom-style: solid">
+							<tr>
+								<td style="width: 50%">姓名：董铭鑫</td>
+								<td style="width: 50%">生日：1999.08.08</td>
+							</tr>
+							<tr>
+								<td style="width: 50%">国籍：中华人民共和国</td>
+								<td style="width: 50%">出生地：河北邢台</td>
+							</tr>
+							<tr>
+								<td style="width: 50%; height: 29px">身高：175cm</td>
+								<td style="width: 50%; height: 29px">体重：61kg</td>
+							</tr>
+							<tr>
+								<td style="width: 50%">血型：AB</td>
+								<td style="width: 50%">星座：巨蟹座</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<p>邓伦，1992年10月21日出生于河北省石家庄市，中国内地影视男演员，毕业于上海戏剧学院表演系。</p>
+									<p>2012年，出演个人首部电视剧《花非花雾非雾》，从而正式进入演艺圈。</p>
+									<p>2013年，出演民国情感剧《新京华烟云》 。</p>
+									<p>2014年，主演都市情感轻喜剧《爱情上上签》。</p>
+									<p>2015年，在都市青春偶像剧《十五年等待候鸟》中饰演柳千仁 ；同年，出演年代剧《白鹿原》 。</p>
+									<p>2016年，在都市情感励志剧《因为遇见你》中饰演男主角李云恺，从而受到更多关注 ；同年，在都市励志情感剧《欢乐颂2》中饰演谢童 ；在《楚乔传》中饰演大梁太子萧策；随后，获得“腾讯视频星光大赏”年度青春大势艺人奖 。</p>
+									<p>2017年，相继主演了民国情感剧《海棠经雨胭脂透》 、古装神话剧《香蜜沉沉烬如霜》、都市奇幻剧《一千零一夜》 ；同年，作为固定嘉宾参加芒果TV亲子户外真人秀节目《爸爸去哪儿第五季》的录制。</p>
+									<p>2018年，获得国剧盛典年度新晋男演员奖 ；同年，作为常驻嘉宾参加湖南卫视情境类益智互动推理秀《我是大侦探》 。</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+				</tr>
+			</table>
+		</div>
+		<!--以下为获奖记录部分内容-->
+		<div id="tabContent2" style="display: none">
+			<ul>
+				<li>2019-01-11：2018“微博之夜”微博年度人气艺人</li>
+				<li>2018-12-20： 搜狐时尚盛典 年度国剧男明星奖</li>
+				<li>2018-12-18：2018腾讯视频星光盛典 年度人气电视剧男演员</li>
+				<li>2018-12-04： 第15届MAHB年度先生盛典 年度电视剧演员</li>
+				<li>2018-12-01：2019爱奇艺尖叫之夜 年度戏剧人气艺人</li>
+				<li>2018-03-17： 电视剧品质盛典 年度青春号召力剧星</li>
+				<li>2017-12-02：2018爱奇艺尖叫之夜 年度人气艺人奖</li>
+				<li>2017-11-22： 第14届MAHB年度先生盛典 年度最具潜力演员奖</li>
+				<li>2017-09-26：2017微博电视影响力盛典 年度突破艺人</li>
+				<li>2016-12-10：“腾讯视频星光大赏”年度青春大势艺人奖</li>
+				<li>2018-01-01：国剧盛典 年度新晋男演员奖</li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div style="text-align: center; width: 100%; font-size: 12px; color: #333;">&copy;版权所有：石家庄铁道大学信息科学与技术学院</div>
+</body>
+</html>
